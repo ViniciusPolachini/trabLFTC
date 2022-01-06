@@ -1,0 +1,35 @@
+.AF{
+    height: 70vh;
+    width: 99vw;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+}
+
+.inputs{
+    margin-right: 5vw;
+}
+
+.inputTransicao{
+    width: 3vw
+}
+
+#Estados{
+    border: gray solid 1px;
+    padding: 10px 10px 10px 10px;
+}
+
+#Transicoes{
+    border: gray solid 1px;
+    padding: 10px 10px 10px 10px;
+}
+
+#inputsTeste{
+    overflow-y: auto;
+    width: 16vw;
+    height: 10vh;
+}
+
+#Reset{
+    margin-top: 2vh;
+}
