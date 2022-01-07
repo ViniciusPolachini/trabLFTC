@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {useState} from 'react'
 import { Layout, Button} from 'antd';
 import { Link } from "react-router-dom";
@@ -28,10 +28,10 @@ export default function Home(){
 
     function handleSetTransicao(e, campo){
         const transicao = {...novaTransicao};
-        if(campo==0){
+        if(campo===0){
             transicao.caracter=e.target.value;
         }
-        else if(campo==1){
+        else if(campo===1){
             transicao.origem=e.target.value.slice(1);
         }
         else{
@@ -176,7 +176,7 @@ export default function Home(){
         const style = tipo!==0 ? (tipo===1 ? {'backgroundColor': 'green'}:{'backgroundColor': 'red'}):{'backgroundColor': 'gray'};
         let i;
         for(i = 0; i<estados.length-1; i++){
-            if(parseInt(estados[i].data.id)+1!=parseInt(estados[i+1].data.id)){
+            if(parseInt(estados[i].data.id)+1!==parseInt(estados[i+1].data.id)){
                 break;
             }
         }

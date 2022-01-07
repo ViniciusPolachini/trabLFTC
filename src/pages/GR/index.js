@@ -42,7 +42,6 @@ export default function Home(){
     }
 
     function handleTeste(string){
-        console.log(string)
         let texto = string
         let tipo = ''
         let aux = true;
@@ -53,8 +52,11 @@ export default function Home(){
             for(let i of regra){
                 const stringAux = i.replace(/[^a-z]/g, '');
                 tipo = tipo==='' ? 
-                (i[i.length-1]===i[i.length-1].toUpperCase() ? 'direita':'esquerda')
+                (i[i.length-1]===i[i.length-1].toUpperCase() ? 'direita':
+                (i[0]===i[0].toUpperCase() ? 'esquerda':''))
                 :(tipo);
+                console.log(i[i.length-1]);
+                console.log(tipo);
                 const prox = tipo=='direita' ? i.length-1:0;
                 if(stringAux==texto.slice(0,stringAux.length)){
                     teste=true;
